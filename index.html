@@ -553,18 +553,127 @@
                 casino. The question isn't whether you can afford to invest in premier real estate. The question is
                 whether you can afford not to.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <div class="space-y-4">
-                    <a href="#qualification-form"
-                        class="btn-primary block w-full px-12 py-5 rounded-md text-xl font-bold shadow-xl">JOIN THE
-                        INVESTOR CLUB</a>
-                    <p class="text-sm text-slate-gray">No cost, no obligation, exclusive deal access</p>
+<!-- Qualification Form -->
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-soft-gray rounded-2xl shadow-2xl p-8 text-black text-left border border-gray-200">
+                    <div class="mb-8">
+                        <div
+                            class="flex justify-between text-xs font-bold text-nighthawk-navy uppercase tracking-widest mb-2">
+                            <span>Investor Qualification</span>
+                            <span id="step-indicator-2">Step 1 of 4</span>
+                        </div>
+                        <div class="w-full h-1 bg-gray-200 rounded-full">
+                            <div id="progress-bar-2" class="h-full bg-nighthawk-navy transition-all duration-500 w-[25%]">
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="multi-step-form-2">
+                        <!-- Step 1: Accreditation -->
+                        <div id="step-1-2" class="step-content active">
+                            <h3 class="text-2xl font-bold text-nighthawk-navy mb-4">Are you an accredited investor?</h3>
+                            <p class="text-slate-gray mb-6 text-sm">Most opportunities require a net worth of $1M+
+                                (excluding primary residence) or $200k+ annual income.</p>
+                            <div class="space-y-3">
+                                <button type="button" onclick="goToStep2(2)"
+                                    class="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all flex justify-between items-center group bg-white">
+                                    <span class="font-semibold">Yes, I am accredited</span>
+                                    <svg class="w-5 h-5 text-gray-300 group-hover:text-nighthawk-navy" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" onclick="goToStep2(2)"
+                                    class="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all flex justify-between items-center group bg-white">
+                                    <span class="font-semibold">No, but I am close</span>
+                                    <svg class="w-5 h-5 text-gray-300 group-hover:text-nighthawk-navy" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Investment Amount -->
+                        <div id="step-2-2" class="step-content">
+                            <h3 class="text-2xl font-bold text-nighthawk-navy mb-4">How much are you looking to invest?
+                            </h3>
+                            <p class="text-slate-gray mb-6 text-sm">Typical minimum investment per deal is $50,000.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button type="button" onclick="goToStep2(3)"
+                                    class="text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">$50k
+                                    - $100k</button>
+                                <button type="button" onclick="goToStep2(3)"
+                                    class="text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">$100k
+                                    - $250k</button>
+                                <button type="button" onclick="goToStep2(3)"
+                                    class="text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">$250k
+                                    - $500k</button>
+                                <button type="button" onclick="goToStep2(3)"
+                                    class="text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">$500k+</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Timeline -->
+                        <div id="step-3-2" class="step-content">
+                            <h3 class="text-2xl font-bold text-nighthawk-navy mb-4">What is your investment timeline?
+                            </h3>
+                            <p class="text-slate-gray mb-6 text-sm">When are you looking to deploy capital?</p>
+                            <div class="space-y-3">
+                                <button type="button" onclick="goToStep2(4)"
+                                    class="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">Ready
+                                    to invest now</button>
+                                <button type="button" onclick="goToStep2(4)"
+                                    class="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">Within
+                                    the next 3 months</button>
+                                <button type="button" onclick="goToStep2(4)"
+                                    class="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-nighthawk-navy hover:bg-blue-50 transition-all font-semibold bg-white">Just
+                                    gathering information</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Final / Book Call -->
+                        <div id="step-4-2" class="step-content">
+                            <h3 class="text-2xl font-bold text-nighthawk-navy mb-2">Great! Let's Connect.</h3>
+                            <p class="text-slate-gray mb-6 text-sm">Join the Investor Club and schedule your one-on-one
+                                call below.</p>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" placeholder="First Name"
+                                        class="w-full p-3 border border-gray-200 rounded-lg outline-nighthawk-navy">
+                                    <input type="text" placeholder="Last Name"
+                                        class="w-full p-3 border border-gray-200 rounded-lg outline-nighthawk-navy">
+                                </div>
+                                <input type="email" placeholder="Email Address"
+                                    class="w-full p-3 border border-gray-200 rounded-lg outline-nighthawk-navy">
+                                <button type="submit"
+                                    class="w-full btn-primary py-4 rounded-xl font-bold text-lg shadow-lg">SCHEDULE
+                                    ONE-ON-ONE CALL</button>
+                            </div>
+                            <p class="mt-4 text-center text-xs text-slate-gray">By clicking above, you agree to receive
+                                monthly investment reports.</p>
+                        </div>
+                    </form>
                 </div>
-                <div class="space-y-4">
-                    <a href="#qualification-form"
-                        class="bg-white text-nighthawk-navy border-2 border-nighthawk-navy block w-full px-12 py-5 rounded-md text-xl font-bold hover:bg-gray-50 transition-colors">SCHEDULE
-                        A CALL</a>
-                    <p class="text-sm text-slate-gray">Discuss your specific situation with our team</p>
+                <div class="mt-6 flex items-center justify-center space-x-6">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-xs text-slate-gray">Audited Results</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-xs text-slate-gray">Verivest Monitored</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -635,8 +744,9 @@
     </footer>
 
     <script>
+        // First form (hero section)
         function goToStep(step) {
-            document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('#multi-step-form .step-content').forEach(s => s.classList.remove('active'));
             document.getElementById('step-' + step).classList.add('active');
 
             // Update indicator text
@@ -647,9 +757,26 @@
             document.getElementById('progress-bar').style.width = progress + '%';
         }
 
+        // Second form (final CTA section)
+        function goToStep2(step) {
+            document.querySelectorAll('#multi-step-form-2 .step-content').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + step + '-2').classList.add('active');
+
+            // Update indicator text
+            document.getElementById('step-indicator-2').innerText = 'Step ' + step + ' of 4';
+
+            // Update progress bar width
+            const progress = (step / 4) * 100;
+            document.getElementById('progress-bar-2').style.width = progress + '%';
+        }
+
         document.getElementById('multi-step-form').onsubmit = function (e) {
             e.preventDefault();
-            // In a real application, you would capture the form data here
+            alert("Thank you! A member of our team will reach out to schedule your one-on-one call.");
+        };
+
+        document.getElementById('multi-step-form-2').onsubmit = function (e) {
+            e.preventDefault();
             alert("Thank you! A member of our team will reach out to schedule your one-on-one call.");
         };
     </script>
